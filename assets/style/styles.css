@@ -1,0 +1,214 @@
+/* =========================
+   Bas
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #333;
+}
+
+
+/* =========================
+   Header
+========================= */
+.header {
+  background-color: #55b6b3;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   Hero
+========================= */
+.hero {
+  background: url('../images/bilutanperson.webp') center/cover no-repeat;
+  color: white;
+  padding: 0 2rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 450px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero h1,
+.hero p {
+  margin: 0.5rem 0;
+}
+
+
+/* =========================
+   Sektioner (Tjänster, Om oss, etc.)
+========================= */
+.tjanster,
+.om-oss,
+.referenser,
+.kontakt {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   Tjänster – 3 + 2 layout
+========================= */
+.tjanst-lista {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.tjanst-lista.rad1 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+}
+
+.tjanst-lista.rad2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px; /* eller valfri bredd för att centrera */
+}
+
+.tjanst-lista li {
+  background: #f5f5f5;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Centrera 2 tjänster på rad 2
+
+.tjanst-lista .rad2:nth-child(4) {
+  grid-column: 2 / 3;
+}
+
+.tjanst-lista .rad2:nth-child(5) {
+  grid-column: 3 / 4;
+}
+ */
+
+/* =========================
+   Kontaktformulär
+========================= */
+.kontakt h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.kontakt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.kontakt-form label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.kontakt-form button {
+  background-color: #55b6b3;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.kontakt-form button:hover {
+  background-color: #449f9c;
+}
+
+
+/* =========================
+   Kontaktinfo
+========================= */
+.kontaktinfo {
+  margin-top: 2rem;
+  background-color: #eef3f5;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.kontaktinfo h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  background-color: #55b6b3;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
